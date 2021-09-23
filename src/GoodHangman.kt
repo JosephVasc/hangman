@@ -3,6 +3,7 @@ import java.io.FileNotFoundException
 import java.io.FileReader
 import java.util.*
 
+
 /**
  * Written by Seikyung Jung
  * Warning:
@@ -31,7 +32,7 @@ class GoodHangman {
 	private val correct: MutableSet<Char> = HashSet()
 
 	// Construct the dictionary
-	fun addWord(word: String) {
+	private fun addWord(word: String) {
 		if (!dictionary.containsKey(word.length)) {
 			dictionary[word.length] = LinkedList()
 		}
