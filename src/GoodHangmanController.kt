@@ -1,14 +1,6 @@
 import java.io.FileNotFoundException
 import java.util.*
 
-/**
- * Written by Seikyung Jung
- * Warning:
- * You must not post this code online.
- * You must not share this code without permission from the author
- *
- * The console user interface
- */
 object GoodHangmanController {
     private fun view(game: GoodHangman) {
         System.out.format(
@@ -47,14 +39,6 @@ object GoodHangmanController {
     @JvmStatic
     fun main(args: Array<String>) {
         val game = GoodHangman()
-        /*
-		File file = new File("dictionary.txt");
-		FileReader reader = new FileReader(file);
-		Scanner scanner = new Scanner(reader);
-		while (scanner.hasNextLine()) {
-			game.addWord(scanner.nextLine());
-		}
-		scanner.close();
-		 */consoleUI(game)
+    consoleUI(game)
     }
 }

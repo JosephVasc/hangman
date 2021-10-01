@@ -1,14 +1,7 @@
 import java.io.FileNotFoundException
 import java.util.*
 
-/**
- * Written by Seikyung Jung
- * Warning:
- * You must not post this code online.
- * You must not share this code without permission from the author
- *
- * The console user interface
- */
+
 object HangmanController {
     private fun view(game: Hangman) {
         System.out.format(
@@ -30,10 +23,10 @@ object HangmanController {
         while (!game.isOver) {
             view(game)
             println("Enter a letter: ")
-            // eat up "enters" (CRLF).
+
             while (scanner.nextLine().also { line = it } == "");
             letter = line[0]
-            // Repeat until user guess a new letter (not duplicated letter)
+
             while (!game.makeGuess(letter)) {
                 println("Try another letter: ")
                 letter = scanner.nextLine()[0]

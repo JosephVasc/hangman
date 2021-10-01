@@ -3,22 +3,6 @@ import java.io.FileNotFoundException
 import java.io.FileReader
 import java.util.*
 
-/**
- * Written by Seikyung Jung
- * Warning:
- * You must not post this code online.
- * You must not share this code without permission from the author
- *
- * All three List, Set, and Map are interfaces in Java
- *
- * The Set interface provides a collection of unique objects,
- * i.e. Set doesn't allow duplicates, while Map holds two objects per Entry (key-value pair)
- * and it may contain duplicate values but keys are always unique.
- *
- * The main difference between List and Set interface in Java is that
- * List allows duplicates while Set doesn't allow duplicates.
- *
- */
 class Hangman {
     // Group words by length (key is length, value is word list)
     private val dictionary: MutableMap<Int, LinkedList<String>> = HashMap()
@@ -135,9 +119,6 @@ class Hangman {
         private const val MAX_INCORRECT_GUESSES = 6
     }
 
-    /**
-     * Constructor
-     */
     init {
         // Note that dictionary file has a lot of words, which makes it hard to win the game
         // Warning: I got this file from Internet, so it may contain inappropriate words.
